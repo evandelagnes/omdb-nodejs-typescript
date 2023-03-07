@@ -41,9 +41,11 @@ GOOGLE_PRIVATE_KEY=
 > Afin d'obtenir de créer le compte de service, suivre le tutoriel suivant : https://developers.google.com/workspace/guides/create-credentials#service-account.<br>Un fichier ```.json``` est téléchargé dans lequel on retrouve deux propriétés ```client_email``` et ```private_key``` qui sont les valeurs à renseigner.
 
 ```bash
-GOOGLE_SERVICE_ACCOUNT_EMAIL=<client_email>
-GOOGLE_PRIVATE_KEY=<private_key>
+GOOGLE_SERVICE_ACCOUNT_EMAIL="<client_email>"
+GOOGLE_PRIVATE_KEY="<private_key>"
 ```
+
+> :warning: **Pensez à mettre les valeurs entre guillemets comment l'exemple ci-dessus**
 
 3. partager le Google Spreadsheet avec l'email du compte de service et le mettre en **Éditeur**
 
