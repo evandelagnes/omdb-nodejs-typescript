@@ -36,9 +36,14 @@ GOOGLE_PRIVATE_KEY=
 > L'id est la dernière chaîne de caractères dans l'url du spreadsheet. Par exemple, dans l'url https://docs.google.com/spreadsheets/d/1qpyC0XzvTcKT6EISywvqESX3A0MwQoFDE8p-Bll4hps/edit#gid=0, le spreadsheet ID est ```1qpyC0XzvTcKT6EISywvqESX3A0MwQoFDE8p-Bll4hps```.
 
 - ```GOOGLE_SERVICE_ACCOUNT_EMAIL``` est l'email du compte de service. e.g. : xxx@xxx-xxx.iam.gserviceaccount.com
-- ```GOOGLE_PRIVATE_KEY``` est la clé privée du compte de service. e.g. : xxx@xxx-xxx.iam.gserviceaccount.com
+- ```GOOGLE_PRIVATE_KEY``` est la clé privée du compte de service.
 
 > Afin d'obtenir de créer le compte de service, suivre le tutoriel suivant : https://developers.google.com/workspace/guides/create-credentials#service-account.<br>Un fichier ```.json``` est téléchargé dans lequel on retrouve deux propriétés ```client_email``` et ```private_key``` qui sont les valeurs à renseigner.
+
+```bash
+GOOGLE_SERVICE_ACCOUNT_EMAIL=<client_email>
+GOOGLE_PRIVATE_KEY=<private_key>
+```
 
 3. partager le Google Spreadsheet avec l'email du compte de service et le mettre en **Éditeur**
 
@@ -76,7 +81,7 @@ Le framework choisi est performant et scalable, il faut tout de même mettre en 
 
 Forces:
 - rapidité et efficacité
-- scalabilité: une architecture solide afin d'augmenter la complexité du projet
+- scalabilité: une architecture solide afin de pouvoir augmenter la complexité du projet
 - facilité d'utilisation du framework
 
 Faiblesses:
