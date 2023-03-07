@@ -1,4 +1,4 @@
 import Router from "./Router";
-import UserRoute from "./UserRoute";
+import FilmRoute from "./FilmRoute";
 
-export { Router, UserRoute };
+export { Router, FilmRoute };

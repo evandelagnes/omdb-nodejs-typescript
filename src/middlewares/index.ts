@@ -1,11 +1,5 @@
 import ErrorHandlerMiddleware from "./ErrorHandlerMiddleware";
-import PassportMiddleware from "./PassportMiddleware";
 import MorganMiddleware from "./MorganMiddleware";
-import SessionMiddleware from "./SessionMiddleware";
+import AuthMiddleware from "./AuthMiddleware";
 
-export {
-    ErrorHandlerMiddleware,
-    PassportMiddleware,
-    MorganMiddleware,
-    SessionMiddleware,
-};
+export { ErrorHandlerMiddleware, MorganMiddleware, AuthMiddleware };

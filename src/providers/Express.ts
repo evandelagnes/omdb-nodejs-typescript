@@ -1,13 +1,7 @@
 import express from "express";
-import passport from "passport";
 import { Express as NativeExpress } from "express";
-import {
-    ErrorHandlerMiddleware,
-    MorganMiddleware,
-    PassportMiddleware,
-    SessionMiddleware,
-} from "@middlewares";
-import { Logger, env, Redis } from "@providers";
+import { ErrorHandlerMiddleware, MorganMiddleware } from "@middlewares";
+import { Logger, env } from "@providers";
 import { Server } from "http";
 import { Router } from "@routes";
 
@@ -16,8 +10,6 @@ class Express {
     private _server?: Server;
 
     constructor() {
-        this.init();
-
         this._express = express();
 
         this.middlewares();
@@ -25,20 +17,11 @@ class Express {
         this.handler();
     }
 
-    public init() {
-        Redis.init();
-    }
-
     public middlewares(): void {
         this._express.use(express.json());
         this._express.use(express.urlencoded({ extended: true }));
 
         MorganMiddleware.mount(this._express);
-        PassportMiddleware.mount();
-        SessionMiddleware.mount(this._express);
-
-        this._express.use(passport.initialize());
-        this._express.use(passport.session());
     }
 
     public routes(): void {

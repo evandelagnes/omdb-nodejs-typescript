@@ -1,6 +1,6 @@
 import { config } from "dotenv";
 import { join } from "path";
-import { cleanEnv, host, makeValidator, port, str } from "envalid";
+import { cleanEnv, makeValidator, str } from "envalid";
 
 config({
     path: join(process.cwd(), ".env"),
@@ -14,18 +14,10 @@ interface IEnvironment {
     API_HOST: string;
     API_PORT: number;
     API_ROUTE_PREFIX: string;
-    MYSQL_HOST: string;
-    MYSQL_PORT: number;
-    MYSQL_USERNAME: string;
-    MYSQL_PASSWORD: string;
-    MYSQL_URL: string;
-    MYSQL_ROOT_PASSWORD: string;
-    REDIS_HOST: string;
-    REDIS_PORT: number;
-    REDIS_PASSWORD: string;
-    SESSION_NAME: string;
-    SESSION_SECRET: string;
-    COOKIE_DOMAIN: string | undefined;
+    OMDB_API_KEY?: string;
+    GOOGLE_SPREADSHEET_FILE_ID: string;
+    GOOGLE_SERVICE_ACCOUNT_EMAIL: string;
+    GOOGLE_PRIVATE_KEY: string;
 }
 
 const route_prefix = makeValidator((x) => {
@@ -33,7 +25,7 @@ const route_prefix = makeValidator((x) => {
     else if (/^\/[a-zA-Z0-9]*$/.test(x)) return x;
     else
         throw new Error(
-            "Route prefix must start with a '/' and can have several characters/digits after it",
+            "Route prefix must start with a '/' and can have several characters/digits after it"
         );
 });
 
@@ -62,18 +54,9 @@ class Environment {
             API_HOST: str(),
             API_PORT: api_port(),
             API_ROUTE_PREFIX: route_prefix(),
-            MYSQL_HOST: host(),
-            MYSQL_PORT: port(),
-            MYSQL_USERNAME: str(),
-            MYSQL_PASSWORD: str(),
-            MYSQL_URL: str(),
-            MYSQL_ROOT_PASSWORD: str(),
-            REDIS_HOST: str(),
-            REDIS_PORT: port(),
-            REDIS_PASSWORD: str(),
-            SESSION_NAME: str(),
-            SESSION_SECRET: str(),
-            COOKIE_DOMAIN: str({ default: "" }),
+            GOOGLE_SPREADSHEET_FILE_ID: str(),
+            GOOGLE_SERVICE_ACCOUNT_EMAIL: str(),
+            GOOGLE_PRIVATE_KEY: str(),
         });
         this._env = {
             ...this._env,

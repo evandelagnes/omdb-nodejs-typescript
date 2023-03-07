@@ -1,5 +1,5 @@
 import { Router as ExpressRouter } from "express";
-import { UserRoute } from "@routes";
+import { FilmRoute } from "@routes";
 
 class Router {
     private _router: ExpressRouter;
@@ -9,7 +9,7 @@ class Router {
     }
 
     public mount(): ExpressRouter {
-        this._router.use("/auth", UserRoute.router());
+        this._router.use("/films", FilmRoute.router());
 
         return this._router;
     }

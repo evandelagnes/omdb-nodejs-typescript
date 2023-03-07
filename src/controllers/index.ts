@@ -1,3 +1,3 @@
-import UserController from "./UserController";
+import FilmController from "./FilmController";
 
-export { UserController };
+export { FilmController };

@@ -1,0 +1,50 @@
+[
+    {
+        "originalName": "Star Wars",
+        "imdbID": "tt0076759"
+    },
+    {
+        "originalName": "The Empire Strikes Back",
+        "imdbID": "tt0080684"
+    },
+    {
+        "originalName": "Return of the Jedi",
+        "imdbID": "tt0086190"
+    },
+    {
+        "originalName": "The Phantom Menace",
+        "imdbID": "tt0120915"
+    },
+    {
+        "originalName": "Attack of the Clones",
+        "imdbID": "tt0121765"
+    },
+    {
+        "originalName": "Revenge of the Sith",
+        "imdbID": "tt0121766"
+    },
+    {
+        "originalName": "The Force Awakens",
+        "imdbID": "tt2488496"
+    },
+    {
+        "originalName": "The Last Jedi",
+        "imdbID": "tt2527336"
+    },
+    {
+        "originalName": "The Rise of Skywalker",
+        "imdbID": "tt2527338"
+    },
+    {
+        "originalName": "Star Wars: The Clone Wars",
+        "imdbID": "tt0458290"
+    },
+    {
+        "originalName": "Rogue One: A Star Wars Story",
+        "imdbID": "tt3748528"
+    },
+    {
+        "originalName": "Solo: A Star Wars Story",
+        "imdbID": "tt3778644"
+    }
+]
